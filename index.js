@@ -51,6 +51,8 @@ const start = async () => {
 
             }
         } catch (error) {
+            console.log(error);
+            
             return bot.sendMessage(chatId, 'Что-то сломалось, попробуйте позже')
         }
     })
@@ -60,8 +62,8 @@ const start = async () => {
         const chatId = msg.message.chat.id;
         const user = await UserModels.findOne({chatId})
         if (data !== "/again") {
-            await bot.sendMessage(chatId, `Ты нажал кнопку под цыфрой ${data}`);
             user.wrong += 1;
+            await bot.sendMessage(chatId, `Ты нажал кнопку под цыфрой ${data}`);
         }
         if (chats[chatId].toString() === msg.data) {
             user.right += 1;
