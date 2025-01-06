@@ -5,7 +5,7 @@ module.exports = new Sequelize(
     'root', // название пользователя БД
     'root', // пароль пользователя БД
     {
-        host: '1master.eccff4ee-1fad-40a8-8a6e-7b3723d41f0c.c.dbaas.selcloud.ru',
+        host: 'master.eccff4ee-1fad-40a8-8a6e-7b3723d41f0c.c.dbaas.selcloud.ru',
         port: 5432,
         dialect: 'postgres'
     }
