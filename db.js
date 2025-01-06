@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 module.exports = new Sequelize(
-    'bot_telega_monke', // Название базы данных
+    'bpt_telega_monke', // Название базы данных
     'root', // название пользователя БД
     'root', // пароль пользователя БД
     {
